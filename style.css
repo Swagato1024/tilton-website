@@ -1,0 +1,192 @@
+:root {
+  --font-page-elements-gap: 7em;
+  --nav-bar-height: 121px;
+  --font-page-default-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  overflow: scroll;
+  border: 2px solid red;
+}
+
+.font-page {
+  width: 98%;
+  height: 950px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--font-page-elements-gap);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(" https://www.tiltongroup.com/assets/medias/_hero_tablet/HD_tilton_20201103-338-copie.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  border: 2px solid blue;
+}
+
+.nav-bar {
+  width: 90%;
+  height: var(--nav-bar-height);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid var(--font-page-default-color);
+}
+
+.finder {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.menu {
+  height: 60px;
+  width: 200px;
+
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--font-page-default-color);
+}
+
+.search-bar {
+  height: 60px;
+  display: flex;
+
+  border-radius: 40px;
+  background-color: var(--font-page-default-color);
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3em;
+
+  align-items: center;
+}
+
+.item-name {
+  font-size: 18px;
+  color: var(--font-page-default-color);
+}
+
+.item-name {
+  font-size: 18px;
+}
+
+.company-logo {
+  font-size: 3em;
+}
+
+.welcome-message {
+  height: 550px;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 8em;
+  color: var(--font-page-default-color);
+}
+
+#welcome-message-line-2 {
+  align-self: flex-end;
+}
+
+.company-logo {
+  font-weight: 700;
+  color: white;
+}
+
+.welcome-message > * {
+  animation: 1s flip-text ease-in-out;
+}
+
+@keyframes flip-text {
+  0% {
+    opacity: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bowl-img {
+  width: 100%;
+}
+
+.bowl {
+  width: 1000px;
+  border: 1px solid red
+}
+.bowl:hover {
+  animation: 3s rotate-bowl ease infinite;
+}
+
+@keyframes rotate-bowl {
+  0% {
+    transform: scale(0.6) translateX(500px);
+    transform: rotate3d(0, 0, 1, 15deg);
+    perspective-origin: 400px;
+    perspective: 800px ;
+    
+  }
+
+  25% {
+    transform: translateZ(30px) scale(1.2) translate(-100px);
+    transform: rotate3d(0,1, 0, 30deg);
+    perspective: 2000px;
+  }
+
+  50% {
+    transform: translateY(10px) scale(1) translateZ(-20px);
+    transform: rotate3d(1, 0, 1, 30deg);
+  }
+
+  75% {
+    tranform: translateZ(20px) translateY(-10px) scale(0.8);
+    perspective: -700px;
+  }
+
+  90% {
+    transform: translateZ(-10px) scale(0.8);
+    perspective: -400px;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
